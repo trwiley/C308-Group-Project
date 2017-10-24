@@ -26,6 +26,7 @@ Our team consists of:
 
 * JSON
 * Potential to add mySQL in the future
+* Django
 
 ## Other Super-Zoomy Cool Stuff
 
