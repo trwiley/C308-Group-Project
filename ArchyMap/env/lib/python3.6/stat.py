@@ -1,1 +1,1 @@
-C:/usr/lib64/python3.6/stat.py
+/usr/lib64/python3.6/stat.py
