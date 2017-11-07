@@ -1,1 +1,1 @@
-/usr/lib64/python3.6/tokenize.py
+C:/usr/lib64/python3.6/tokenize.py

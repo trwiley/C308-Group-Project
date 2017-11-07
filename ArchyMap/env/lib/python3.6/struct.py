@@ -1,1 +1,1 @@
-/usr/lib64/python3.6/struct.py
+C:/usr/lib64/python3.6/struct.py
