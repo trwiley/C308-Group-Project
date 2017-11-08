@@ -24,8 +24,7 @@ Our team consists of:
 
 ###  Back End:
 
-* JSON
-* Potential to add mySQL in the future
+* SQLite
 * Django
 
 ## Other Super-Zoomy Cool Stuff
