@@ -54,7 +54,9 @@ ROOT_URLCONF = 'ArchyMap.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            '../ArchyMap/ArchyMap/templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
