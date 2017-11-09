@@ -12,6 +12,12 @@
     <h3>ArchyMap</h3>
     <div id="map"></div>
     <script>
+      var artifacts = []
+      artifacts.push({lat: 41, lng: -85})
+      artifacts.push({lat: 42, lng: -85})
+      artifacts.push({lat: 43, lng: -85})
+      artifacts.push({lat: 44, lng: -85})
+
       function initMap() {
         var uluru = {lat: 40, lng: -86};
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -19,6 +25,14 @@
           center: uluru,
           streetViewControl: false
         });
+
+        //render the makers
+        for (var i = 0; i < artifacts.length; i++) {
+          var marker = new google.maps.Marker({
+            position: artifacts[i],
+            map: map
+          });
+        }
       }
     </script>
     <script async defer
