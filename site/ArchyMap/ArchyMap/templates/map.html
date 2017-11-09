@@ -1,8 +1,35 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>ArchyMap</title>
-    </head>
-    <body>
-        <p>exciting content goes here!</p>
-    </body>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>ArchyMap</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 40, lng: -85};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+          });
+        var marker = new google.maps.Marker({
+            position: {lat: 45, lng: -80},
+            map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDN43GXaDBm0mv0A14f4tCy-6IuSUpncEY&callback=initMap">
+    </script>
+  </body>
 </html>
