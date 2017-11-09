@@ -19,18 +19,11 @@
     <div id="map"></div>
     <script>
       function initMap() {
-        var uluru = {lat: 40, lng: -85};
+        var uluru = {lat: 40, lng: -86};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-            position: uluru,
-            map: map
-          });
-        var marker = new google.maps.Marker({
-            position: {lat: 45, lng: -80},
-            map: map
+          zoom: 6,
+          center: uluru,
+          streetViewControl: false
         });
       }
     </script>
