@@ -15,4 +15,7 @@ class Artifact(models.Model):
     state = models.CharField(max_length = 255)
     county = models.CharField(max_length = 255)
     description = models.CharField(max_length = 1000)
+    latitude = models.CharField(max_length = 100)
+    longitude = models.CharField(max_length = 100)
     admin = models.ForeignKey(Admin)
+   

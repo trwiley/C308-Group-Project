@@ -1,23 +1,65 @@
 <!DOCTYPE html>
+<!--
+  Template Name: map.html
+  Programmers: Taylor Wiley and Michael Barney
+  Purpose: displays the map containing artifacts, along with information about them when the user clicks on an artifact.
+  Languages: amalgamation of HTML, inline CSS and inline Javascript.
+ -->
 <html>
   <head>
-    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <title>ArchyMap</title>
+
+    <!-- Stylesheet -->
     <style>
+      /***********************************************************
+      Inline CSS
+      ***********************************************************/
       body{
-        background-color: #F5DD54
+        background-color: #F0DF82
       }
        #map {
-        height: 400px;
-        width: 100%;
-       }
+        height: 700px;
+        width: 70%;
+        margin: auto;
+      }
+      h3 {
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 36pt;
+      }
+      ul {
+        list-style-type:none;
+      }
+      #top-banner {
+        padding-top: 30px;
+        margin: auto;
+        
+        width: 70%;
+        height : 200px;
+        text-align: center;
+        background-color: #AD550C;
+        color: #F0DF82;
+      }
+
     </style>
+
   </head>
+
   <body>
-    <h3>ArchyMap</h3>
-    <div id="top-banner"></div>
-    <div id="side-panel"></div>
+   
+    <div id="top-banner">
+      <h3>ArchyMap</h3>
+    </div>
+     
+    
     <div id="map"></div>
-    <script>
+
+    <script id = "mapscript"> 
+      /**********************************************************
+      Script Name: mapscript
+      Purpose: to render the map using the Google Maps API
+      Programmer: Michael Barney
+      **********************************************************/
       var artifacts = []
       artifacts.push({lat: 41, lng: -85})
       artifacts.push({lat: 42, lng: -85})
