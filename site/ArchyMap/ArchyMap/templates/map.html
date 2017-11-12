@@ -4,6 +4,7 @@
   Programmers: Taylor Wiley and Michael Barney
   Purpose: displays the map containing artifacts, along with information about them when the user clicks on an artifact.
   Languages: amalgamation of HTML, inline CSS and inline Javascript.
+  Credit: Modal code from https://www.w3schools.com/howto/howto_css_modals.asp
  -->
 <html>
   <head>
@@ -40,6 +41,43 @@
         background-color: #AD550C;
         color: #F0DF82;
       }
+       /* The Modal (background) */
+      .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      }
+
+      /* Modal Content/Box */
+      .modal-content {
+          background-color: rgba(233, 219, 142, 0.86);
+          margin: 15% auto; /* 15% from the top and centered */
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%; /* Could be more or less, depending on screen size */
+      }
+
+      /* The Close Button */
+      .close {
+          color: #aaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+      } 
 
     </style>
 
@@ -51,6 +89,31 @@
       <h3>ArchyMap</h3>
     </div>
      
+    <div id="myModal" class="modal">
+      
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p><li>
+            <ul>
+              Name:
+            </ul>
+            <ul>
+              Site Number:
+            </ul>
+            <ul>
+              State:
+            </ul>
+            <ul>
+              County:
+            </ul>
+            <ul>
+              Description:
+            </ul>
+          </li></p>
+        </div>
+      
+      </div>
     
     <div id="map"></div>
 
@@ -78,9 +141,26 @@
         for (var i = 0; i < artifacts.length; i++) {
           var marker = new google.maps.Marker({
             position: artifacts[i],
-            map: map
-          });
+            map: map,});
         }
+
+        //Is there a way to have the modal pop up when a marker is clicked?
+
+        // Get the modal
+        var modal = document.getElementById('myModal');
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        } 
       }
     </script>
     <script async defer
