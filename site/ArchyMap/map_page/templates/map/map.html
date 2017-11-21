@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+  Template Name: map.html
+  Programmers: Taylor Wiley and Michael Barney
+  Purpose: displays the map containing artifacts, along with information about them when the user clicks on an artifact.
+  Languages: amalgamation of HTML, inline CSS and inline Javascript.
+  Credit: Modal code from https://www.w3schools.com/howto/howto_css_modals.asp
+ -->
+<html>
+  <head>
+
+    <title>ArchyMap</title>
+
+    <!-- Stylesheet -->
+    <style>{% include "style.css" %}</style>
+
+  </head>
+
+  <body>
+   
+    <div id="top-banner">
+      <h3>ArchyMap</h3>
+    </div>
+     
+    <div id="myModal" class="modal">
+      
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p><li>
+            <ul>
+              Name:
+            </ul>
+            <ul>
+              Site Number:
+            </ul>
+            <ul>
+              State:
+            </ul>
+            <ul>
+              County:
+            </ul>
+            <ul>
+              Description:
+            </ul>
+          </li></p>
+        </div>
+      
+      </div>
+
+    <div id = "sign-in">
+      <p>Admin sign-in</p>
+    </div>
+    
+    <div id="map"></div>
+
+    <script id = "mapscript">{% include "map.js" %}</script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDN43GXaDBm0mv0A14f4tCy-6IuSUpncEY&callback=initMap">
+    </script>
+  </body>
+</html>
