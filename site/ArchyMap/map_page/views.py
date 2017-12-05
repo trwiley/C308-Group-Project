@@ -15,9 +15,11 @@ def get_data(request, *args, **kwargs):
         data.append({
             "lat": float(artifact.latitude),
             "lng": float(artifact.longitude),
+            "name": str(artifact.name),
+            "siteno": str(artifact.siteno),
+            "description": str(artifact.description),
+            "state": str(artifact.state),
+            "county": str(artifact.county),
         })
-    # data = [{
-    #     "lat": 41,
-    #     "lng": -86,
-    # }]
+
     return JsonResponse(data, safe=False)
