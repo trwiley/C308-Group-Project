@@ -6,7 +6,7 @@ Programmer: Michael Barney
 var endpoint = '/data';
 
 var markers = [];
-var mapCenter = {lat: 40, lng: 85};
+var mapCenter = {lat: 40, lng: -85};
 
 function addMarker(artifact, mainMap)
 {
