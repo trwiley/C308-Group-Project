@@ -44,9 +44,9 @@ function renderMarkers(mainMap) {
         addMarker(artifact, mainMap);
       });
     },
-    error: function(error_artifactList) {
+    error: function(error) {
       console.log("Error");
-      console.log(error_artifactList);
+      console.log(error);
     }
   });
 }
