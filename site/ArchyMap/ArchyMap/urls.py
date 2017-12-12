@@ -19,6 +19,6 @@ from map_page import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls, name = 'admin'),
-    url(r'^map/$', include('map_page.urls')),
+    url(r'^map/', include('map_page.urls')),
     url(r'^data/$', include('map_page.dataurls')),
 ]

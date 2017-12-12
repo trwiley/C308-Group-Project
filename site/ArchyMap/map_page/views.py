@@ -23,3 +23,9 @@ def get_data(request, *args, **kwargs):
         })
 
     return JsonResponse(data, safe=False)
+
+def art_view(request):
+    return render(request, 'map/artifact.html')
+
+def admin_view(request):
+    return render(request, 'map/admin_screen.html')

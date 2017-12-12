@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+  Template Name: admin_html
+  Programmers: Taylor Wiley
+  Purpose: mockup of the artifact submit page.
+ -->
+<html>
+  <head>
+
+    <title>ArchyMap</title>
+
+    <!-- Stylesheet -->
+    <style>{% include "style.css" %}</style>
+  </head>
+
+  <body>
+   
+    <div id="top-banner">
+      <h3>ArchyMap</h3>
+    </div>
+    <div id = "sign-in">
+      <p>Admin sign-in</p>
+    </div>
+    <div id = "admin-mockup">
+        <form>
+            <p>Artifact Name: 
+                <input type = "text" name = "artiname" size = "20" maxlength = "255"/>
+            </p>
+            <p>Site Number:
+                <input type = "text" name = "siteno" size = "20" maxlength = "255"/>
+            </p>
+            <p>State:
+                <input type = "text" name = "state" size = "20" maxlength = "255" />
+            </p>
+            <p>County:
+                <input type = "text" name = "county" size = "20" maxlength = "255" />
+            </p>
+            
+            <p>Latitude:
+                <input type = "text" name = "latitude" size = "20" maxlength = "100" />
+            </p>
+            <p>Longitude:
+                <input type = "text" name = "longitude" size = "20" maxlength = "100" />
+            </p>
+            <p>Description:
+                <textarea name = "description" cols = "50" rows = "10">description...</textarea>
+            </p>
+            <input type = "submit" value: "submit" />
+
+
+        </form>
+    </div>
+  </body>
+</html>
